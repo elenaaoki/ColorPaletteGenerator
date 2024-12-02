@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Extractor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Color Extractor</h1>
+        <div class="file-input-wrapper">
+            <label for="imageUpload" class="file-input-label">Choose File</label>
+            <input type="file" id="imageUpload" accept="image/*">
+            <span id="fileName"></span>
+        </div>
+        <div class="options">
+            <div>
+                <input type="checkbox" id="extractAll">
+                <label for="extractAll">Extract all colors</label>
+            </div>
+            <div>
+                <input type="checkbox" id="extractPartial">
+                <label for="extractPartial">Extract partial colors</label>
+                <input type="number" id="colorCount" min="1" max="256" value="10" disabled>
+            </div>
+        </div>
+        <div class="actions">
+            <button id="extractBtn" disabled>Extract Colors</button>
+            <button id="downloadBtn" disabled>Download</button>
+            <button id="resetBtn" disabled>Reset</button>
+        </div>
+        <div id="loadingIndicator" class="loading-indicator hidden">Processing...</div>
+        <div id="colorContainer"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
